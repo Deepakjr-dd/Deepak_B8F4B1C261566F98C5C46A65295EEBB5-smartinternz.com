@@ -1,5 +1,14 @@
-def linear_search_product(product_list, target_product):
-products = ["1 Shooted", "11 Grans", "More", "Labels", "Aug 20", "11 Grans"]
-target = "11 Grans"
-result = linear_search_product(products, target)
-print(result)  # This will print [1, 5] since "11 Grans" is at index 1 and 5 in the list.
+def linearSearchProduct(productList,targetProduct):
+  indices = []
+  for index, product in enumerate(productList):
+    if product == targetProduct:
+      indices.append(index)
+
+  return indices 
+
+# Example usage: 
+products = ["shoes", "boot", "loafer", "shoes", "sandal", "shoes"]
+target = "shoes"
+target2 = 'apple'
+result = linearSearchProduct(products, target2) 
+print( result)
